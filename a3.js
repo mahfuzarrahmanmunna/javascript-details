@@ -1,7 +1,7 @@
 function electionResult(votes) {
     let totalMango = 0;
     let totalBanana = 0;
-    if (!Array.isArray(votes)) {
+    if (typeof votes !== 'array') {
         return 'Invalid';
     }
     for (let vote of votes) {
@@ -22,4 +22,4 @@ function electionResult(votes) {
         return "Draw"
     }
 }
-console.log(electionResult(["banana", "banana", "age e valo chilam", "no"]))
+console.log(electionResult({ result: "mango , banana ,  mango" }))
